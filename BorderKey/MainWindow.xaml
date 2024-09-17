@@ -1,0 +1,86 @@
+﻿<Window x:Class="BorderKey.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BorderKey"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="600" WindowStartupLocation="CenterScreen"
+        KeyDown="Window_KeyDown" KeyUp="Window_KeyUp"
+        >
+    <DockPanel>
+        <TabControl DockPanel.Dock="Top">
+            <TabItem Header="Задание 1">
+                <DockPanel>
+                    <Border DockPanel.Dock="Top" Height="100">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="ShiftBorder" Grid.Column="0" CornerRadius="50" Background="SandyBrown">
+                                <TextBlock FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="SaddleBrown">
+                        Shift
+                                </TextBlock>
+                            </Border>
+
+                            <Border x:Name="CtrlBorder" Grid.Column="1" CornerRadius="50" Background="SandyBrown">
+                                <TextBlock FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="SaddleBrown">
+                        Ctrl
+                                </TextBlock>
+                            </Border>
+
+                            <Border x:Name="AltBorder" Grid.Column="2" CornerRadius="50" Background="SandyBrown">
+                                <TextBlock FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="SaddleBrown">
+                        Space
+                                </TextBlock>
+                            </Border>
+
+                        </Grid>
+                    </Border>
+                    <TextBlock x:Name="KeyTextBlock" FontSize="60" TextAlignment="Center">
+                    </TextBlock>
+
+                </DockPanel>
+            </TabItem>
+
+            <TabItem Header="Задание 2">
+                <Grid Margin="10">
+                    <Border x:Name="YellowBorder" Background="Yellow"
+                MouseEnter="YellowBorder_MouseEnter_1" MouseLeave="YellowBorder_MouseLeave">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Border x:Name="BlueBorder" Background="#0000ff"
+                        CornerRadius="160" Height="250" Width="250" 
+                        MouseEnter="BlueBorder_MouseEnter" MouseLeave="BlueBorder_MouseLeave">
+                            </Border>
+
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <Border x:Name="GreenBorder" Grid.Column="0" Background="#00ff00"
+                            CornerRadius="160" Height="250" Width="250"
+                            MouseEnter="GreenBorder_MouseEnter" MouseLeave="GreenBorder_MouseLeave">
+                                </Border>
+
+                                <Border x:Name="RedBorder" Grid.Column="1" Background="#ff0000" 
+                            CornerRadius="160" Height="250" Width="250" 
+                            MouseEnter="RedBorder_MouseEnter" MouseLeave="RedBorder_MouseLeave">
+                                </Border>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</Window>
